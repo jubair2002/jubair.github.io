@@ -1,829 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Habibullah Jubair - profile</title>
-    <meta
-      name="description"
-      content="DevOps and Cloud Engineer specializing in AWS, Azure, Kubernetes, Docker, CI/CD, and Infrastructure as Code. Building scalable cloud solutions."
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Resume Button -->
-    <div class="resume-btn-container">
-      <a
-        href="#"
-        class="resume-btn"
-        download="Habibullah_Jubair_DevOps_Resume.pdf"
-      >
-        <i class="fas fa-download"></i> Resume
-      </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habibullah Jubair - profile</title>
+  <meta name="description"
+    content="DevOps and Cloud Engineer specializing in AWS, Azure, Kubernetes, Docker, CI/CD, and Infrastructure as Code. Building scalable cloud solutions." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Resume Button -->
+  <div class="resume-btn-container">
+    <a href="#" class="resume-btn" download="Habibullah_Jubair_DevOps_Resume.pdf">
+      <i class="fas fa-download"></i> Resume
+    </a>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="profile-img">
+        <img src="myimage.jpg" alt="Habibullah Jubair" class="profile-picture" />
+      </div>
+      <h3>Habibullah Jubair</h3>
+      <p>DevOps & Cloud Enthusiast</p>
+
+      <!-- Social Links -->
+      <div class="social-links-sidebar">
+        <a href="https://github.com/jubair2002" class="social-link-sidebar" target="_blank" rel="noopener noreferrer"
+          title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/habibullah-jubair" class="social-link-sidebar" target="_blank"
+          rel="noopener noreferrer" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/habibullah.jubair.abir/" class="social-link-sidebar" target="_blank"
+          rel="noopener noreferrer" title="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://leetcode.com/u/Abirjubair" class="social-link-sidebar" target="_blank"
+          rel="noopener noreferrer" title="LeetCode">
+          <i class="fab fa-solid fa-code"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <div class="profile-img">
-          <img
-            src="myimage.jpg"
-            alt="Habibullah Jubair"
-            class="profile-picture"
-          />
-        </div>
-        <h3>Habibullah Jubair</h3>
-        <p>DevOps & Cloud Enthusiast</p>
+    <ul class="nav-links">
+      <li>
+        <a href="#about" class="nav-link active"><i class="fas fa-user"></i> About</a>
+      </li>
+      <li>
+        <a href="#skills" class="nav-link"><i class="fas fa-cogs"></i> Skills</a>
+      </li>
+      <li>
+        <a href="#projects" class="nav-link"><i class="fas fa-cloud"></i> Projects</a>
+      </li>
+      <li>
+        <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education & Training</a>
+      </li>
+      <li>
+        <a href="#experience" class="nav-link"><i class="fas fa-building"></i> Experience</a>
+      </li>
+      <li>
+        <a href="#certifications" class="nav-link"><i class="fas fa-certificate"></i> Certifications</a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+      </li>
+    </ul>
+  </nav>
 
-        <!-- Social Links -->
-        <div class="social-links-sidebar">
-          <a
-            href="https://github.com/jubair2002"
-            class="social-link-sidebar"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/habibullah-jubair"
-            class="social-link-sidebar"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/habibullah.jubair.abir/"
-            class="social-link-sidebar"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="facebook"
-          >
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a
-            href="https://leetcode.com/u/Abirjubair"
-            class="social-link-sidebar"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LeetCode"
-          >
-            <i class="fab fa-solid fa-code"></i>
-          </a>
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-toggle" id="mobile-toggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- About Section -->
+    <section id="about" class="section active">
+      <div class="container">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <h2 id="typed-name">
+              <span class="name-line">Hello, I'm <span class="highlight">Habibullah Jubair</span></span>
+              <span class="rotating-title"></span>
+            </h2>
+            <p class="lead">
+              DevOps & Cloud Enthusiast passionate about automation,
+              scalability, and modern infrastructure.
+            </p>
+            <p>
+              I enjoy working on cloud platforms like
+              <strong>Azure</strong> and <strong>AWS</strong>, with a strong
+              interest in containerization, Kubernetes, and Infrastructure as
+              Code. My focus is on building systems that are
+              <strong>reliable, secure, and cost-efficient</strong> while
+              enabling faster delivery cycles.
+            </p>
+            <p>
+              With hands-on experience in
+              <strong>CI/CD pipelines, monitoring, automation, and cloud-native
+                tools</strong>, I’m always excited to learn and apply new technologies that
+              improve system performance and developer productivity.
+            </p>
+            <p>
+              Beyond just technology, I’m passionate about solving real-world
+              problems through cloud engineering and DevOps practices, and I
+              love collaborating on projects that push the boundaries of
+              efficiency and innovation.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h1 class="section-title">Skills & Technologies</h1>
 
-      <ul class="nav-links">
-        <li>
-          <a href="#about" class="nav-link active"
-            ><i class="fas fa-user"></i> About</a
-          >
-        </li>
-        <li>
-          <a href="#skills" class="nav-link"
-            ><i class="fas fa-cogs"></i> Skills</a
-          >
-        </li>
-        <li>
-          <a href="#projects" class="nav-link"
-            ><i class="fas fa-cloud"></i> Projects</a
-          >
-        </li>
-        <li>
-          <a href="#education" class="nav-link"
-            ><i class="fas fa-graduation-cap"></i> Education & Training</a
-          >
-        </li>
-        <li>
-          <a href="#experience" class="nav-link"
-            ><i class="fas fa-building"></i> Experience</a
-          >
-        </li>
-        <li>
-          <a href="#certifications" class="nav-link"
-            ><i class="fas fa-certificate"></i> Certifications</a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="nav-link"
-            ><i class="fas fa-envelope"></i> Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
-    <button class="mobile-toggle" id="mobile-toggle">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- About Section -->
-      <section id="about" class="section active">
-        <div class="container">
-          <h1 class="section-title">About Me</h1>
-          <div class="about-content">
-            <div class="about-text">
-              <h2 id="typed-name">
-                <span class="name-line">Hello, I'm <span class="highlight">Habibullah Jubair</span></span>
-                <span class="rotating-title"></span>
-              </h2>
-              <p class="lead">
-                DevOps & Cloud Enthusiast passionate about automation,
-                scalability, and modern infrastructure.
-              </p>
-              <p>
-                I enjoy working on cloud platforms like
-                <strong>Azure</strong> and <strong>AWS</strong>, with a strong
-                interest in containerization, Kubernetes, and Infrastructure as
-                Code. My focus is on building systems that are
-                <strong>reliable, secure, and cost-efficient</strong> while
-                enabling faster delivery cycles.
-              </p>
-              <p>
-                With hands-on experience in
-                <strong
-                  >CI/CD pipelines, monitoring, automation, and cloud-native
-                  tools</strong
-                >, I’m always excited to learn and apply new technologies that
-                improve system performance and developer productivity.
-              </p>
-              <p>
-                Beyond just technology, I’m passionate about solving real-world
-                problems through cloud engineering and DevOps practices, and I
-                love collaborating on projects that push the boundaries of
-                efficiency and innovation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Skills Section -->
-      <section id="skills" class="section">
-        <div class="container">
-          <h1 class="section-title">Skills & Technologies</h1>
-
-          <div class="skills-categories">
-            <!-- languagle and database -->
-            <div class="skill-category">
-              <h3><i class="fas fa-solid fa-code"></i> Language & Databases</h3>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-database"></i>
-                  <span>Mysql</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-database"></i>
-                  <span>MongoDB</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
+        <div class="skills-categories">
+          <!-- languagle and database -->
+          <div class="skill-category">
+            <h3><i class="fas fa-solid fa-code"></i> Language & Databases</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-solid fa-database"></i>
+                <span>Mysql</span>
               </div>
-            </div>
-            <!-- Cloud Platforms -->
-            <div class="skill-category">
-              <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fab fa-aws"></i>
-                  <span>AWS</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-microsoft"></i>
-                  <span>Azure</span>
-                </div>
+              <div class="skill-item">
+                <i class="fab fa-solid fa-database"></i>
+                <span>MongoDB</span>
               </div>
-            </div>
-            <!-- devops tools -->
-            <div class="skill-category">
-              <h3>
-                <i class="fas fa-solid fa-code"></i> DevOps Tools & Technology
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fab fa-docker"></i>
-                  <span>Docker</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-dharmachakra"></i>
-                  <span>Kubernetes</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-anchor"></i>
-                  <span>Helm</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-jenkins"></i>
-                  <span>Jenkins</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-ship"></i>
-                  <span>ArgoCD</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-fire-alt"></i>
-                  <span>Prometheus</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-solid fa-chart-line"></i>
-                  <span>Grafana</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-solid fa-cube"></i>
-                  <span>Terraform</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-git-alt"></i>
-                  <span>Git</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-github"></i>
-                  <span>github</span>
-                </div>
-              </div>
-            </div>
-            <!-- Security tools -->
-            <div class="skill-category">
-              <h3><i class="fas fa-shield-alt"></i> Security Tools</h3>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fab fa-aws"></i>
-                  <span>AWS</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-microsoft"></i>
-                  <span>Azure</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-server"></i>
-                  <span>Wazuh SIEM</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-bullseye"></i>
-                  <span>SonarQube</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-spider"></i>
-                  <span>OWASP</span>
-                </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
               </div>
             </div>
           </div>
+          <!-- Cloud Platforms -->
+          <div class="skill-category">
+            <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-microsoft"></i>
+                <span>Azure</span>
+              </div>
+            </div>
+          </div>
+          <!-- devops tools -->
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-solid fa-code"></i> DevOps Tools & Technology
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-solid fa-dharmachakra"></i>
+                <span>Kubernetes</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-solid fa-anchor"></i>
+                <span>Helm</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-jenkins"></i>
+                <span>Jenkins</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-ship"></i>
+                <span>ArgoCD</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-solid fa-fire-alt"></i>
+                <span>Prometheus</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-solid fa-chart-line"></i>
+                <span>Grafana</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-solid fa-cube"></i>
+                <span>Terraform</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-github"></i>
+                <span>github</span>
+              </div>
+            </div>
+          </div>
+          <!-- Security tools -->
+          <div class="skill-category">
+            <h3><i class="fas fa-shield-alt"></i> Security Tools</h3>
+            <div class="skills-grid">
+
+              <div class="skill-item">
+                <i class="fas fa-eye"></i>
+                <span>Wazuh SIEM</span>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-wave-square"></i>
+                <span>SonarQube</span>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-bug"></i>
+                <span>OWASP</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <div class="container">
-          <h1 class="section-title">Featured Projects</h1>
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="project-image">
-                <i class="fas fa-code"></i>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h1 class="section-title">Featured Projects</h1>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="project-content">
+              <h3>Meal Management System</h3>
+              <p>
+                Designed and implemented a comprehensive solution for easily
+                managing regular home meal planning and tracking budget, meal
+                count, monthly reports , notifications.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Php</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">MySql</span>
               </div>
-              <div class="project-content">
-                <h3>Meal Management System</h3>
-                <p>
-                  Designed and implemented a comprehensive solution for easily
-                  managing regular home meal planning and tracking budget, meal
-                  count, monthly reports , notifications.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Php</span>
-                  <span class="tag">HTML5</span>
-                  <span class="tag">CSS3</span>
-                  <span class="tag">MySql</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://mealmama.page.gd/"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                  >
-                  <a
-                    href="https://github.com/jubair2002/meal-management-system"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i> Code</a
-                  >
-                </div>
+              <div class="project-links">
+                <a href="https://mealmama.page.gd/" class="btn-link" target="_blank" rel="noopener noreferrer"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/jubair2002/meal-management-system" class="btn-link" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-              <div class="project-image">
-                <i class="fas fa-code"></i>
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Platform</h3>
+              <p>
+                Built and managed a digital e-commerce platform to solve the
+                typical buy and sell and managing customers, marchent, super
+                admin,tracking delivery, delivey person all in one place.
+              </p>
+              <div class="project-tags">
+                <span class="tag">JavaFX</span>
+                <span class="tag">SceneBuilder</span>
+                <span class="tag">SCSS</span>
+                <span class="tag">Intellij Idea</span>
               </div>
-              <div class="project-content">
-                <h3>E-Commerce Platform</h3>
-                <p>
-                  Built and managed a digital e-commerce platform to solve the
-                  typical buy and sell and managing customers, marchent, super
-                  admin,tracking delivery, delivey person all in one place.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">JavaFX</span>
-                  <span class="tag">SceneBuilder</span>
-                  <span class="tag">SCSS</span>
-                  <span class="tag">Intellij Idea</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="#"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                  >
-                  <a
-                    href="https://github.com/jubair2002/e-commerce-javafx"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i> Code</a
-                  >
-                </div>
+              <div class="project-links">
+                <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/jubair2002/e-commerce-javafx" class="btn-link" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-             <div
-                class="project-image"
-                style="
+          <div class="project-card">
+            <div class="project-image" style="
                   background-image: url('https://www.loffler.com/hs-fs/hubfs/Microsoft%20Azure%20Blog.jpg?height=420&name=Microsoft%20Azure%20Blog.jpg');
                   background-size: cover;
                   background-position: center;
-                "
-              >
-                <i class="fas fa-code"></i>
+                ">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="project-content">
+              <h3>Azure Cloud Resource CLI</h3>
+              <p>
+                Implementing and documenting azure cloud resource like VM,
+                AKS, load balancers, gateway and many .creating , provisioning
+                and managing using azure cli commands easily.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Azure</span>
+                <span class="tag">Bash</span>
+                <span class="tag">CLI</span>
+                <span class="tag">Scripting</span>
               </div>
-              <div class="project-content">
-                <h3>Azure Cloud Resource CLI</h3>
-                <p>
-                  Implementing and documenting azure cloud resource like VM,
-                  AKS, load balancers, gateway and many .creating , provisioning
-                  and managing using azure cli commands easily.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Azure</span>
-                  <span class="tag">Bash</span>
-                  <span class="tag">CLI</span>
-                  <span class="tag">Scripting</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/jubair2002/Azure-Cloud-Resource"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i> Scripts In Github</a
-                  >
-                </div>
+              <div class="project-links">
+                <a href="https://github.com/jubair2002/Azure-Cloud-Resource" class="btn-link" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github"></i> Scripts In Github</a>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-              <div
-                class="project-image"
-                style="
+          <div class="project-card">
+            <div class="project-image" style="
                   background-image: url('https://k8s.co.il/wp-content/uploads/2025/04/image-9-1024x683.webp');
                   background-size: contain;
                   background-repeat: no-repeat;
                   background-position: center;
                   background-color: #f8f9fa;
-                "
-              >
+                ">
+            </div>
+            <div class="project-content">
+              <h3>CI/CD Pipeline with GitOps and ArgoCD</h3>
+              <p>
+                Automated continuous integration and deployment pipeline using gitlab ci, kubernetes, and ArgoCD.
+                Implementing automated testing, building, and deployment workflows for containerized applications with
+                monitoring and rollback capabilities.
+              </p>
+              <div class="project-tags">
+                <span class="tag">GitLab Ci</span>
+                <span class="tag">Docker</span>
+                <span class="tag">ArgoCD</span>
+                <span class="tag">Kubernetes</span>
               </div>
-              <div class="project-content">
-                <h3>CI/CD Pipeline with GitOps and ArgoCD</h3>
-                <p>
-                  Automated continuous integration and deployment pipeline using gitlab ci, kubernetes, and ArgoCD. Implementing automated testing, building, and deployment workflows for containerized applications with monitoring and rollback capabilities.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">GitLab Ci</span>
-                  <span class="tag">Docker</span>
-                  <span class="tag">ArgoCD</span>
-                  <span class="tag">Kubernetes</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/jubair2002/gitlab-ci-cd-with-GitOps-Project.git"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fas fa-external-link-alt"></i> Project Link</a
-                  >
-                </div>
+              <div class="project-links">
+                <a href="https://github.com/jubair2002/gitlab-ci-cd-with-GitOps-Project.git" class="btn-link"
+                  target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Project Link</a>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-              <div
-                class="project-image"
-                style="
+          <div class="project-card">
+            <div class="project-image" style="
                   background-image: url('https://miro.medium.com/0*oyFzBjYHdGI8bevf.png');
                   background-size: cover;
                   background-position: center;
-                "
-              >
-                
+                ">
+
+            </div>
+            <div class="project-content">
+              <h3>Microservice Application Deployment in AKS</h3>
+              <p>
+                Implementing and deploying full microserice application using
+                docker & kubernetes. with maintaining spearate namespace ,
+                deployments, replicaSet, Serivce ,Ingress & HPA for High
+                scalability.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Azure Kubernetes Service (AKS)</span>
+                <span class="tag">Nginx Ingress Controller</span>
+                <span class="tag">Kubectl CLI</span>
+                <span class="tag">Mysql</span>
               </div>
-              <div class="project-content">
-                <h3>Microservice Application Deployment in AKS</h3>
-                <p>
-                  Implementing and deploying full microserice application using
-                  docker & kubernetes. with maintaining spearate namespace ,
-                  deployments, replicaSet, Serivce ,Ingress & HPA for High
-                  scalability.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Azure Kubernetes Service (AKS)</span>
-                  <span class="tag">Nginx Ingress Controller</span>
-                  <span class="tag">Kubectl CLI</span>
-                  <span class="tag">Mysql</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/jubair2002/microservice-app-deployment-with-docker-and-k8s.git"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i> Code & Diagrams In Github</a
-                  >
-                </div>
+              <div class="project-links">
+                <a href="https://github.com/jubair2002/microservice-app-deployment-with-docker-and-k8s.git"
+                  class="btn-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code &
+                  Diagrams In Github</a>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-              <div
-                class="project-image"
-                style="
+          <div class="project-card">
+            <div class="project-image" style="
                   background-image: url('https://ecanarys.com/wp-content/uploads/2023/12/terraform-azure-1-1024x512.png');
                   background-size: cover;
                   background-position: center;
-                "
-              >
-                
-              </div>
-              <div class="project-content">
-                <h3>Production-Ready infrastructure Deployment using IaC</h3>
-                <p>
-                  Implemented a production-ready infrastructure using Infrastructure as Code (IaC) principles with Terraform and Azure DevOps.
-                   modular architecture was used to enhance reusability and maintainability of the code.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Infrastructure as a code (IaC)</span>
-                  <span class="tag">Terraform</span>
-                  <span class="tag">Azure DevOps</span>
-                  <span class="tag">Modular Architecture</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/jubair2002/azure-iac-deployment-terraform.git"
-                    class="btn-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i> Code & Diagrams In Github</a
-                  >
-                </div>
-              </div>
+                ">
+
             </div>
-
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education" class="section">
-        <div class="container">
-          <h1 class="section-title">Education & Learning</h1>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div class="institute-logo">
-                    <i class="fas fa-graduation-cap"></i>
-                  </div>
-                  <div class="timeline-info">
-                    <h3>Bachelor of Computer Science & Engineering</h3>
-                    <h4>United International University</h4>
-                    <span class="timeline-date">2022 - 2026</span>
-                  </div>
-                </div>
-                <p>
-                  Specialization in Computer Systems, Network Administration and operating systems.
-                  Focused on distributed systems, cloud computing, and DevOps
-                  methodologies. Graduated with distinction.
-                </p>
-                <div class="education-type">
-                  <span class="type-badge degree">Degree</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div class="institute-logo">
-                    <i class="fab fa-redhat"></i>
-                  </div>
-                  <div class="timeline-info">
-                    <h3>Redhat Linux System Administration</h3>
-                    <h4>CSL Training Dhaka</h4>
-                    <span class="timeline-date">2025</span>
-                  </div>
-                </div>
-                <p>
-                  Hands-on Practical Training in Redhat enterprise linux about
-                  deep drive in linux, managing package, SELinux, Firewalls,
-                  systemd services, networking, storage, NFS share, setup file
-                  server, virtualization, containerization & its
-                  administrations.
-                </p>
-                <div class="education-type">
-                  <span class="type-badge training">Training</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div class="institute-logo">
-                    <i class="fas fa-network-wired"></i>
-                  </div>
-                  <div class="timeline-info">
-                    <h3>CCNAv7: Introduction to Networks</h3>
-                    <h4>Cisco Networking Academy</h4>
-                    <span class="timeline-date">2023</span>
-                  </div>
-                </div>
-                <p>
-                  Configure switches and end devices, Configure routers to
-                  enable end-to-end connectivity, Create IPv4 and IPv6
-                  addressing schemes, Configure a small network with security
-                  best practices, Troubleshoot connectivity in a small network.
-                </p>
-                <div class="education-type">
-                  <span class="type-badge certification">Certification</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section">
-        <div class="container">
-          <h1 class="section-title">Professional Experience</h1>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>demo</h3>
-                <h4>demo</h4>
-                <span class="timeline-date">Present</span>
-                <p>
-                  Leading DevOps initiatives for enterprise clients, focusing on
-                  cloud-native architecture and automation. Managing
-                  infrastructure for applications serving millions of users.
-                </p>
-                <ul>
-                  <li>
-                    Architected and deployed scalable Kubernetes clusters on AWS
-                    and Azure
-                  </li>
-                  <li>
-                    Implemented Infrastructure as Code using Terraform, reducing
-                    provisioning time by 80%
-                  </li>
-                  <li>
-                    Built comprehensive CI/CD pipelines serving 50+
-                    microservices
-                  </li>
-                  <li>
-                    Established monitoring and alerting systems reducing MTTR by
-                    60%
-                  </li>
-                  <li>
-                    Led cost optimization initiatives achieving 40% reduction in
-                    cloud spend
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certifications Section -->
-      <section id="certifications" class="section">
-        <div class="container">
-          <h1 class="section-title">Certifications</h1>
-          <div class="certifications-grid">
-            <div class="cert-card">
-              <div class="cert-icon azure">
-                <i class="fab fa-brands fa-redhat"></i>
-              </div>
-              <h3>Redhat Certified System Administrator</h3>
-              <p>CSL Training</p>
-              <a
-                href="https://drive.google.com/file/d/1fbwAlalu909pfwqRfKdfvHUaLv1XJkfX/view?usp=sharing"
-                target="_blank"
-                class="btn-cert-link"
-              >
-                <i class="fas fa-eye"></i> Show</a
-              >
-            </div>
-
-            <div class="cert-card">
-              <div class="cert-icon azure">
-                <i class="fab fa-microsoft"></i>
-              </div>
-              <h3>Designing and Implementing Microsoft DevOps Solutions</h3>
-              <p>Microsoft</p>
-              <a
-                href="https://drive.google.com"
-                target="_blank"
-                class="btn-cert-link"
-              >
-                <i class="fas fa-eye"></i> Show</a
-              >
-            </div>
-
-            <div class="cert-card">
-              <div class="cert-icon azure">
-                <i class="fab fa-solid fa-server"></i>
-              </div>
-              <h3>CyberSecurity For Engineer</h3>
-              <br />
-              <p>UIU Cisco Academy</p>
-              <a
-                href="https://drive.google.com/file/d/1k5ILixLanwNE-LjN_iRl05m1KrepnGME/view?usp=sharing"
-                target="_blank"
-                class="btn-cert-link"
-              >
-                <i class="fas fa-eye"></i> Show</a
-              >
-            </div>
-
-            <div class="cert-card">
-              <div class="cert-icon azure">
-                <i class="fab fa-solid fa-network-wired"></i>
-              </div>
-              <h3>CCNAv7: Introduction to Networks</h3>
-              <p>Cisco Networking Academy</p>
-              <a
-                href="https://drive.google.com/file/d/1Ygm5Q0tpzb-YV657jX4bpBhY1J5fX5qw/view?usp=sharing"
-                target="_blank"
-                class="btn-cert-link"
-              >
-                <i class="fas fa-eye"></i> Show</a
-              >
-            </div>
-            <div class="cert-card">
-              <div class="cert-icon azure">
-                <i class="fab fa-solid fa-infinity"></i>
-              </div>
-              <h3>DevOps For Engineer</h3>
-              <p>UIU Cisco Networking Academy</p>
-              <a
-                href="https://drive.google.com/file/d/1RCPee-po9kdxUFneC15ZctBZt27o6wWJ/view?usp=sharing"
-                target="_blank"
-                class="btn-cert-link"
-              >
-                <i class="fas fa-eye"></i> Show</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="container">
-          <h1 class="section-title">Let's Connect</h1>
-          <div class="contact-content">
-            <div class="contact-info">
-              <h3>Ready to Discuss Your Next Project?</h3>
+            <div class="project-content">
+              <h3>Production-Ready infrastructure Deployment using IaC</h3>
               <p>
-                I'm always interested in challenging DevOps and cloud
-                infrastructure projects. Whether you need help with cloud
-                migration, CI/CD implementation, or scaling your infrastructure,
-                let's talk!
+                Implemented a production-ready infrastructure using Infrastructure as Code (IaC) principles with
+                Terraform and Azure DevOps.
+                modular architecture was used to enhance reusability and maintainability of the code.
               </p>
-
-              <div class="contact-details">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i>
-                  <span>hmjubair12@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i>
-                  <span>017**-***96</span>
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Available for Remote Work</span>
-                </div>
+              <div class="project-tags">
+                <span class="tag">Infrastructure as a code (IaC)</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Azure DevOps</span>
+                <span class="tag">Modular Architecture</span>
               </div>
-
-              <div class="social-links">
-                <a
-                  href="https://linkedin.com/in/habibullah-jubair"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a
-                  href="https://github.com/jubair2002"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="https://hub.docker.com/u/jubair2002"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Docker Hub"
-                >
-                  <i class="fab fa-docker"></i>
-                </a>
-                <a
-                  href="#"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="AWS Community"
-                >
-                  <i class="fab fa-aws"></i>
-                </a>
+              <div class="project-links">
+                <a href="https://github.com/jubair2002/azure-iac-deployment-terraform.git" class="btn-link"
+                  target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code & Diagrams In Github</a>
               </div>
             </div>
+          </div>
 
-            <div class="contact-form">
-              <form id="contact-form">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" required />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <h1 class="section-title">Education & Learning</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="institute-logo">
+                  <i class="fas fa-graduation-cap"></i>
                 </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
+                <div class="timeline-info">
+                  <h3>Bachelor of Computer Science & Engineering</h3>
+                  <h4>United International University</h4>
+                  <span class="timeline-date">2022 - 2026</span>
                 </div>
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" required />
+              </div>
+              <p>
+                Specialization in Computer Systems, Network Administration and operating systems.
+                Focused on distributed systems, cloud computing, and DevOps
+                methodologies. Graduated with distinction.
+              </p>
+              <div class="education-type">
+                <span class="type-badge degree">Degree</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="institute-logo">
+                  <i class="fab fa-redhat"></i>
                 </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                    placeholder="Tell me about your project, timeline, and how I can help..."
-                  ></textarea>
+                <div class="timeline-info">
+                  <h3>Redhat Linux System Administration</h3>
+                  <h4>CSL Training Dhaka</h4>
+                  <span class="timeline-date">2025</span>
                 </div>
-                <button type="submit" class="btn-primary">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-              </form>
+              </div>
+              <p>
+                Hands-on Practical Training in Redhat enterprise linux about
+                deep drive in linux, managing package, SELinux, Firewalls,
+                systemd services, networking, storage, NFS share, setup file
+                server, virtualization, containerization & its
+                administrations.
+              </p>
+              <div class="education-type">
+                <span class="type-badge training">Training</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="institute-logo">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="timeline-info">
+                  <h3>CCNAv7: Introduction to Networks</h3>
+                  <h4>Cisco Networking Academy</h4>
+                  <span class="timeline-date">2023</span>
+                </div>
+              </div>
+              <p>
+                Configure switches and end devices, Configure routers to
+                enable end-to-end connectivity, Create IPv4 and IPv6
+                addressing schemes, Configure a small network with security
+                best practices, Troubleshoot connectivity in a small network.
+              </p>
+              <div class="education-type">
+                <span class="type-badge certification">Certification</span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h1 class="section-title">Professional Experience</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>demo</h3>
+              <h4>demo</h4>
+              <span class="timeline-date">Present</span>
+              <p>
+                Leading DevOps initiatives for enterprise clients, focusing on
+                cloud-native architecture and automation. Managing
+                infrastructure for applications serving millions of users.
+              </p>
+              <ul>
+                <li>
+                  Architected and deployed scalable Kubernetes clusters on AWS
+                  and Azure
+                </li>
+                <li>
+                  Implemented Infrastructure as Code using Terraform, reducing
+                  provisioning time by 80%
+                </li>
+                <li>
+                  Built comprehensive CI/CD pipelines serving 50+
+                  microservices
+                </li>
+                <li>
+                  Established monitoring and alerting systems reducing MTTR by
+                  60%
+                </li>
+                <li>
+                  Led cost optimization initiatives achieving 40% reduction in
+                  cloud spend
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <h1 class="section-title">Certifications</h1>
+        <div class="certifications-grid">
+          <div class="cert-card">
+            <div class="cert-icon azure">
+              <i class="fab fa-brands fa-redhat"></i>
+            </div>
+            <h3>Redhat Certified System Administrator</h3>
+            <p>CSL Training</p>
+            <a href="https://drive.google.com/file/d/1fbwAlalu909pfwqRfKdfvHUaLv1XJkfX/view?usp=sharing" target="_blank"
+              class="btn-cert-link">
+              <i class="fas fa-eye"></i> Show</a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon azure">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3>Designing and Implementing Microsoft DevOps Solutions</h3>
+            <p>Microsoft</p>
+            <a href="https://drive.google.com" target="_blank" class="btn-cert-link">
+              <i class="fas fa-eye"></i> Show</a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon azure">
+              <i class="fab fa-solid fa-server"></i>
+            </div>
+            <h3>CyberSecurity For Engineer</h3>
+            <br />
+            <p>UIU Cisco Academy</p>
+            <a href="https://drive.google.com/file/d/1k5ILixLanwNE-LjN_iRl05m1KrepnGME/view?usp=sharing" target="_blank"
+              class="btn-cert-link">
+              <i class="fas fa-eye"></i> Show</a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon azure">
+              <i class="fab fa-solid fa-network-wired"></i>
+            </div>
+            <h3>CCNAv7: Introduction to Networks</h3>
+            <p>Cisco Networking Academy</p>
+            <a href="https://drive.google.com/file/d/1Ygm5Q0tpzb-YV657jX4bpBhY1J5fX5qw/view?usp=sharing" target="_blank"
+              class="btn-cert-link">
+              <i class="fas fa-eye"></i> Show</a>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon azure">
+              <i class="fab fa-solid fa-infinity"></i>
+            </div>
+            <h3>DevOps For Engineer</h3>
+            <p>UIU Cisco Networking Academy</p>
+            <a href="https://drive.google.com/file/d/1RCPee-po9kdxUFneC15ZctBZt27o6wWJ/view?usp=sharing" target="_blank"
+              class="btn-cert-link">
+              <i class="fas fa-eye"></i> Show</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h1 class="section-title">Let's Connect</h1>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Ready to Discuss Your Next Project?</h3>
+            <p>
+              I'm always interested in challenging DevOps and cloud
+              infrastructure projects. Whether you need help with cloud
+              migration, CI/CD implementation, or scaling your infrastructure,
+              let's talk!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>hmjubair12@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>017**-***96</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Available for Remote Work</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://linkedin.com/in/habibullah-jubair" class="social-link" target="_blank"
+                rel="noopener noreferrer" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/jubair2002" class="social-link" target="_blank" rel="noopener noreferrer"
+                title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://hub.docker.com/u/jubair2002" class="social-link" target="_blank"
+                rel="noopener noreferrer" title="Docker Hub">
+                <i class="fab fa-docker"></i>
+              </a>
+              <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="AWS Community">
+                <i class="fab fa-aws"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                  placeholder="Tell me about your project, timeline, and how I can help..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
