@@ -533,4 +533,3 @@ if (!isHighPerformance) {
     `;
     document.head.appendChild(style);
 }
-
