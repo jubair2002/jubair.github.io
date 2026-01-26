@@ -1,659 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Habibullah Jubair - profile</title>
-  <meta name="description"
-    content="DevOps and Cloud Engineer specializing in AWS, Azure, Kubernetes, Docker, CI/CD, and Infrastructure as Code. Building scalable cloud solutions." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Habibullah Jubair - DevOps & Cloud Engineer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Minimal Slate & Indigo Palette */
+      --primary: #6366f1; /* Indigo */
+      --primary-hover: #4f46e5;
+      --text-dark: #09090b; /* Zinc 950 */
+      --text-muted: #71717a; /* Zinc 500 */
+      --bg: #ffffff;
+      --bg-alt: #fafafa;
+      --border: #e4e4e7; /* Zinc 200 */
+      --nav-height: 70px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--bg);
+      overflow-x: hidden;
+    }
+
+    html { 
+        scroll-behavior: smooth; 
+        scroll-padding-top: var(--nav-height);
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: var(--nav-height);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.025em;
+      color: var(--text-dark);
+      flex-shrink: 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a.active {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .nav-links a.active::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--primary);
+        bottom: -4px;
+        left: 0;
+    }
+
+    .nav-resume-btn {
+      padding: 0.5rem 1rem;
+      background: var(--text-dark);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-resume-btn:hover {
+      background: var(--primary);
+    }
+
+    /* Section Spacing */
+    section {
+      padding: 3.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: left;
+      color: var(--text-dark);
+      letter-spacing: -0.025em;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding-top: 6rem;
+    }
+
+    .hero-content {
+      text-align: left;
+      max-width: 800px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      border: 3px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.05em;
+    }
+
+    .hero .highlight {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-start;
+      margin-bottom: 2.5rem;
+    }
+
+    .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: #f5f3ff;
+      transform: translateY(-2px);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: flex-start;
+    }
+
+    .skill-item {
+      padding: 1rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .skill-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+    }
+
+    .skill-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      transition: all 0.2s;
+      text-align: left;
+      overflow: hidden;
+    }
+    
+    .project-card:hover {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .project-image {
+      width: 120px;
+      min-width: 120px;
+      background: var(--bg-alt);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 2rem;
+    }
+
+    .project-content {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      background: #f5f3ff;
+      color: var(--primary);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Project Buttons */
+    .project-actions {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .btn-project {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .btn-code {
+        background: transparent;
+        border: 1px solid var(--text-dark);
+        color: var(--text-dark);
+    }
+
+    .btn-code:hover {
+        background: var(--text-dark);
+        color: white;
+    }
+
+    .btn-live {
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        color: white;
+    }
+
+    .btn-live:hover {
+        background: var(--primary-hover);
+    }
+
+    /* Experience, Education, Certs */
+    .experience-list, .timeline, .cert-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    .experience-item, .timeline-item, .cert-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .experience-icon, .timeline-icon, .cert-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    .experience-date, .timeline-date {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-link {
+      margin-left: auto;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    
+    .cert-link:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+
+    /* Updated Contact Section - Clean Card Design */
+    .contact-card {
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 4rem 2rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-card h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+        color: var(--text-muted);
+        max-width: 500px;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .email-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: var(--text-dark);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px; /* Pill shape */
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.2s;
+    }
+
+    .email-btn:hover {
+        background: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    .location-text {
+        color: var(--text-muted);
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-container { display: none; } 
+      
+      .hero { flex-direction: column; text-align: center; justify-content: center; padding-top: 8rem; }
+      .hero-content { text-align: center; margin: 0 auto; }
+      .social-links { justify-content: center; }
+      
+      .project-card, .experience-item, .timeline-item, .cert-card {
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+      .project-image { width: 100%; height: 100px; border-right: none; border-bottom: 1px solid var(--border); }
+      .cert-link { margin-left: 0; margin-top: 1rem; display: inline-block; }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Resume Button -->
-  <div class="resume-btn-container">
-    <a href="https://docs.google.com/document/d/18RB2O4gvjoRabQdprj7-GtuUgp_1myuA/edit?usp=sharing&ouid=116510778465700252747&rtpof=true&sd=true" class="resume-btn" download="Habibullah_Jubair_Resume.pdf">
-      <i class="fas fa-download"></i> Resume
-    </a>
-  </div>
 
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <div class="profile-img">
-        <img src="myimage.jpg" alt="Habibullah Jubair" class="profile-picture" />
+  <header>
+    <nav>
+      <div class="logo"></div>
+      <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      
+      <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          
+          <a href="https://docs.google.com/document/d/18RB2O4gvjoRabQdprj7-GtuUgp_1myuA/edit?usp=sharing" class="nav-resume-btn" target="_blank">
+             Resume <i class="fas fa-download"></i>
+          </a>
       </div>
-      <h3>Habibullah Jubair</h3>
-      <p>DevOps & Cloud Enthusiast</p>
+    </nav>
+  </header>
 
-      <!-- Social Links -->
-      <div class="social-links-sidebar">
-        <a href="https://github.com/jubair2002" class="social-link-sidebar" target="_blank" rel="noopener noreferrer"
-          title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/habibullah-jubair" class="social-link-sidebar" target="_blank"
-          rel="noopener noreferrer" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/habibullah.jubair.abir/" class="social-link-sidebar" target="_blank"
-          rel="noopener noreferrer" title="facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://leetcode.com/u/Abirjubair" class="social-link-sidebar" target="_blank"
-          rel="noopener noreferrer" title="LeetCode">
-          <i class="fab fa-solid fa-code"></i>
-        </a>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="myimage.jpg" alt="Habibullah Jubair" class="profile-pic">
+      <h1>Hi, I'm <span class="highlight">Habibullah Jubair</span></h1>
+      <p>DevOps & Cloud Engineer passionate about building scalable, reliable infrastructure on AWS and Azure.</p>
+      <div class="social-links">
+        <a href="https://github.com/jubair2002" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/habibullah-jubair" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://hub.docker.com/u/jubair2002" class="social-link" target="_blank"><i class="fab fa-docker"></i></a>
+        <a href="mailto:hmjubair12@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+  </section>
 
-    <ul class="nav-links">
-      <li>
-        <a href="#about" class="nav-link active"><i class="fas fa-user"></i> About</a>
-      </li>
-      <li>
-        <a href="#skills" class="nav-link"><i class="fas fa-cogs"></i> Skills</a>
-      </li>
-      <li>
-        <a href="#projects" class="nav-link"><i class="fas fa-cloud"></i> Projects</a>
-      </li>
-      <li>
-        <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education & Training</a>
-      </li>
-      <li>
-        <a href="#experience" class="nav-link"><i class="fas fa-building"></i> Experience</a>
-      </li>
-      <li>
-        <a href="#certifications" class="nav-link"><i class="fas fa-certificate"></i> Certifications</a>
-      </li>
-      <li>
-        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-      </li>
-    </ul>
-  </nav>
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" /></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" /></div>
+    </div>
+  </section>
 
-  <!-- Mobile Menu Toggle -->
-  <button class="mobile-toggle" id="mobile-toggle">
-    <i class="fas fa-bars"></i>
-  </button>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <!-- About Section -->
-    <section id="about" class="section active">
-      <div class="container">
-        <h1 class="section-title">About Me</h1>
-        <div class="about-content">
-          <div class="about-text">
-            <h2 id="typed-name">
-              <span class="name-line">Hello, I'm <span class="highlight">Habibullah Jubair</span></span>
-              <span class="rotating-title"></span>
-            </h2>
-            <p class="lead">
-              DevOps & Cloud Enthusiast passionate about automation,
-              scalability, and modern infrastructure.
-            </p>
-            <p>
-              I enjoy working on cloud platforms like
-              <strong>Azure</strong> and <strong>AWS</strong>, with a strong
-              interest in containerization, Kubernetes, and Infrastructure as
-              Code. My focus is on building systems that are
-              <strong>reliable, secure, and cost-efficient</strong> while
-              enabling faster delivery cycles.
-            </p>
-            <p>
-              With hands-on experience in
-              <strong>CI/CD pipelines, monitoring, automation, and cloud-native
-                tools</strong>, I’m always excited to learn and apply new technologies that
-              improve system performance and developer productivity.
-            </p>
-            <p>
-              Beyond just technology, I’m passionate about solving real-world
-              problems through cloud engineering and DevOps practices, and I
-              love collaborating on projects that push the boundaries of
-              efficiency and innovation.
-            </p>
+  <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-infinity"></i></div>
+        <div class="project-content">
+          <h3>CI/CD Pipeline with GitOps</h3>
+          <p>Automated continuous integration and deployment pipeline using GitLab CI, Kubernetes, and ArgoCD with monitoring and rollback capabilities.</p>
+          <div class="project-tags"><span class="tag">GitLab CI</span><span class="tag">Docker</span><span class="tag">ArgoCD</span><span class="tag">Kubernetes</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/jubair2002/gitlab-ci-cd-with-GitOps-Project.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h1 class="section-title">Skills & Technologies</h1>
-
-        <div class="skills-categories">
-          <!-- languagle and database -->
-          <div class="skill-category">
-            <h3><i class="fas fa-solid fa-code"></i> Language & Databases</h3>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fab fa-solid fa-database"></i>
-                <span>Mysql</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-solid fa-database"></i>
-                <span>MongoDB</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-              </div>
-            </div>
-          </div>
-          <!-- Cloud Platforms -->
-          <div class="skill-category">
-            <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fab fa-aws"></i>
-                <span>AWS</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-microsoft"></i>
-                <span>Azure</span>
-              </div>
-            </div>
-          </div>
-          <!-- devops tools -->
-          <div class="skill-category">
-            <h3>
-              <i class="fas fa-solid fa-code"></i> DevOps Tools & Technology
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fab fa-docker"></i>
-                <span>Docker</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-solid fa-dharmachakra"></i>
-                <span>Kubernetes</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-solid fa-anchor"></i>
-                <span>Helm</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-jenkins"></i>
-                <span>Jenkins</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-ship"></i>
-                <span>ArgoCD</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-solid fa-fire-alt"></i>
-                <span>Prometheus</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-solid fa-chart-line"></i>
-                <span>Grafana</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-solid fa-cube"></i>
-                <span>Terraform</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-git-alt"></i>
-                <span>Git</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-github"></i>
-                <span>github</span>
-              </div>
-            </div>
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-cloud"></i></div>
+        <div class="project-content">
+          <h3>Production-Ready IaC Deployment</h3>
+          <p>Implemented production-ready infrastructure using Terraform and Azure DevOps with modular architecture for enhanced reusability.</p>
+          <div class="project-tags"><span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">IaC</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/jubair2002/azure-iac-deployment-terraform.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h1 class="section-title">Featured Projects</h1>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="project-content">
-              <h3>Meal Management System</h3>
-              <p>
-                Designed and implemented a comprehensive solution for easily
-                managing regular home meal planning and tracking budget, meal
-                count, monthly reports , notifications.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Php</span>
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">MySql</span>
-              </div>
-              <div class="project-links">
-                <a href="https://mealmama.page.gd/" class="btn-link" target="_blank" rel="noopener noreferrer"><i
-                    class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="https://github.com/jubair2002/meal-management-system" class="btn-link" target="_blank"
-                  rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="project-content">
-              <h3>E-Commerce Platform</h3>
-              <p>
-                Built and managed a digital e-commerce platform to solve the
-                typical buy and sell and managing customers, marchent, super
-                admin,tracking delivery, delivey person all in one place.
-              </p>
-              <div class="project-tags">
-                <span class="tag">JavaFX</span>
-                <span class="tag">SceneBuilder</span>
-                <span class="tag">SCSS</span>
-                <span class="tag">Intellij Idea</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"><i
-                    class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="https://github.com/jubair2002/e-commerce-javafx" class="btn-link" target="_blank"
-                  rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image" style="
-                  background-image: url('https://www.loffler.com/hs-fs/hubfs/Microsoft%20Azure%20Blog.jpg?height=420&name=Microsoft%20Azure%20Blog.jpg');
-                  background-size: cover;
-                  background-position: center;
-                ">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="project-content">
-              <h3>Azure Cloud Resource CLI</h3>
-              <p>
-                Implementing and documenting azure cloud resource like VM,
-                AKS, load balancers, gateway and many .creating , provisioning
-                and managing using azure cli commands easily.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Azure</span>
-                <span class="tag">Bash</span>
-                <span class="tag">CLI</span>
-                <span class="tag">Scripting</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/jubair2002/Azure-Cloud-Resource" class="btn-link" target="_blank"
-                  rel="noopener noreferrer"><i class="fab fa-github"></i> Scripts In Github</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image" style="
-                  background-image: url('https://k8s.co.il/wp-content/uploads/2025/04/image-9-1024x683.webp');
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  background-color: #f8f9fa;
-                ">
-            </div>
-            <div class="project-content">
-              <h3>CI/CD Pipeline with GitOps and ArgoCD</h3>
-              <p>
-                Automated continuous integration and deployment pipeline using gitlab ci, kubernetes, and ArgoCD.
-                Implementing automated testing, building, and deployment workflows for containerized applications with
-                monitoring and rollback capabilities.
-              </p>
-              <div class="project-tags">
-                <span class="tag">GitLab Ci</span>
-                <span class="tag">Docker</span>
-                <span class="tag">ArgoCD</span>
-                <span class="tag">Kubernetes</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/jubair2002/gitlab-ci-cd-with-GitOps-Project.git" class="btn-link"
-                  target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Project Link</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image" style="
-                  background-image: url('https://miro.medium.com/0*oyFzBjYHdGI8bevf.png');
-                  background-size: cover;
-                  background-position: center;
-                ">
-
-            </div>
-            <div class="project-content">
-              <h3>Microservice Application Deployment in AKS</h3>
-              <p>
-                Implementing and deploying full microserice application using
-                docker & kubernetes. with maintaining spearate namespace ,
-                deployments, replicaSet, Serivce ,Ingress & HPA for High
-                scalability.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Azure Kubernetes Service (AKS)</span>
-                <span class="tag">Nginx Ingress Controller</span>
-                <span class="tag">Kubectl CLI</span>
-                <span class="tag">Mysql</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/jubair2002/microservice-app-deployment-with-docker-and-k8s.git"
-                  class="btn-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code &
-                  Diagrams In Github</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image" style="
-                  background-image: url('https://ecanarys.com/wp-content/uploads/2023/12/terraform-azure-1-1024x512.png');
-                  background-size: cover;
-                  background-position: center;
-                ">
-
-            </div>
-            <div class="project-content">
-              <h3>Production-Ready infrastructure Deployment using IaC</h3>
-              <p>
-                Implemented a production-ready infrastructure using Infrastructure as Code (IaC) principles with
-                Terraform and Azure DevOps.
-                modular architecture was used to enhance reusability and maintainability of the code.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Infrastructure as a code (IaC)</span>
-                <span class="tag">Terraform</span>
-                <span class="tag">Azure DevOps</span>
-                <span class="tag">Modular Architecture</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/jubair2002/azure-iac-deployment-terraform.git" class="btn-link"
-                  target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code & Diagrams In Github</a>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-      <div class="container">
-        <h1 class="section-title">Education & Learning</h1>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div class="institute-logo">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="timeline-info">
-                  <h3>Bachelor of Computer Science & Engineering</h3>
-                  <h4>United International University</h4>
-                  <span class="timeline-date">2022 - 2026</span>
-                </div>
-              </div>
-              <p>
-                Specialization in Computer Systems, Network Administration and operating systems.
-                Focused on distributed systems, cloud computing, and DevOps
-                methodologies. Graduated with distinction.
-              </p>
-              <div class="education-type">
-                <span class="type-badge degree">Degree</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div class="institute-logo">
-                  <i class="fab fa-redhat"></i>
-                </div>
-                <div class="timeline-info">
-                  <h3>Redhat Linux System Administration</h3>
-                  <h4>CSL Training Dhaka</h4>
-                  <span class="timeline-date">2025</span>
-                </div>
-              </div>
-              <p>
-                Hands-on Practical Training in Redhat enterprise linux about
-                deep drive in linux, managing package, SELinux, Firewalls,
-                systemd services, networking, storage, NFS share, setup file
-                server, virtualization, containerization & its
-                administrations.
-              </p>
-              <div class="education-type">
-                <span class="type-badge training">Training</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div class="institute-logo">
-                  <i class="fas fa-network-wired"></i>
-                </div>
-                <div class="timeline-info">
-                  <h3>CCNAv7: Introduction to Networks</h3>
-                  <h4>Cisco Networking Academy</h4>
-                  <span class="timeline-date">2023</span>
-                </div>
-              </div>
-              <p>
-                Configure switches and end devices, Configure routers to
-                enable end-to-end connectivity, Create IPv4 and IPv6
-                addressing schemes, Configure a small network with security
-                best practices, Troubleshoot connectivity in a small network.
-              </p>
-              <div class="education-type">
-                <span class="type-badge certification">Certification</span>
-              </div>
-            </div>
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-server"></i></div>
+        <div class="project-content">
+          <h3>Microservice Deployment in AKS</h3>
+          <p>Full microservice application deployment using Docker & Kubernetes with separate namespaces, Ingress, and HPA for high scalability.</p>
+          <div class="project-tags"><span class="tag">AKS</span><span class="tag">Nginx Ingress</span><span class="tag">MySQL</span></div>
+          <div class="project-actions">
+             <a href="https://github.com/jubair2002/microservice-app-deployment-with-docker-and-k8s.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h1 class="section-title">Professional Experience</h1>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>demo</h3>
-              <h4>demo</h4>
-              <span class="timeline-date">Present</span>
-              <p>
-                Leading DevOps initiatives for enterprise clients, focusing on
-                cloud-native architecture and automation. Managing
-                infrastructure for applications serving millions of users.
-              </p>
-              <ul>
-                <li>
-                  Architected and deployed scalable Kubernetes clusters on AWS
-                  and Azure
-                </li>
-                <li>
-                  Implemented Infrastructure as Code using Terraform, reducing
-                  provisioning time by 80%
-                </li>
-                <li>
-                  Built comprehensive CI/CD pipelines serving 50+
-                  microservices
-                </li>
-                <li>
-                  Established monitoring and alerting systems reducing MTTR by
-                  60%
-                </li>
-                <li>
-                  Led cost optimization initiatives achieving 40% reduction in
-                  cloud spend
-                </li>
-              </ul>
-            </div>
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-utensils"></i></div>
+        <div class="project-content">
+          <h3>Meal Management System</h3>
+          <p>Comprehensive solution for managing home meal planning, tracking budget, and monthly reports.</p>
+          <div class="project-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span></div>
+          <div class="project-actions">
+             <a href="https://github.com/jubair2002/meal-management-system" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
+             <a href="https://mealmama.page.gd/" class="btn-project btn-live" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <h1 class="section-title">Certifications</h1>
-        <div class="certifications-grid">
-          <div class="cert-card">
-            <div class="cert-icon azure">
-              <i class="fab fa-brands fa-redhat"></i>
-            </div>
-            <h3>Redhat Certified System Administrator</h3>
-            <p>CSL Training</p>
-            <a href="https://drive.google.com/file/d/1fbwAlalu909pfwqRfKdfvHUaLv1XJkfX/view?usp=sharing" target="_blank"
-              class="btn-cert-link">
-              <i class="fas fa-eye"></i> Show</a>
-          </div>
-
-          <div class="cert-card">
-            <div class="cert-icon azure">
-              <i class="fab fa-microsoft"></i>
-            </div>
-            <h3>Designing and Implementing Microsoft DevOps Solutions</h3>
-            <p>Microsoft</p>
-            <a href="https://drive.google.com" target="_blank" class="btn-cert-link">
-              <i class="fas fa-eye"></i> Show</a>
-          </div>
-
-          <div class="cert-card">
-            <div class="cert-icon azure">
-              <i class="fab fa-solid fa-server"></i>
-            </div>
-            <h3>CyberSecurity For Engineer</h3>
-            <br />
-            <p>UIU Cisco Academy</p>
-            <a href="https://drive.google.com/file/d/1k5ILixLanwNE-LjN_iRl05m1KrepnGME/view?usp=sharing" target="_blank"
-              class="btn-cert-link">
-              <i class="fas fa-eye"></i> Show</a>
-          </div>
-
-          <div class="cert-card">
-            <div class="cert-icon azure">
-              <i class="fab fa-solid fa-network-wired"></i>
-            </div>
-            <h3>CCNAv7: Introduction to Networks</h3>
-            <p>Cisco Networking Academy</p>
-            <a href="https://drive.google.com/file/d/1Ygm5Q0tpzb-YV657jX4bpBhY1J5fX5qw/view?usp=sharing" target="_blank"
-              class="btn-cert-link">
-              <i class="fas fa-eye"></i> Show</a>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon azure">
-              <i class="fab fa-solid fa-infinity"></i>
-            </div>
-            <h3>DevOps For Engineer</h3>
-            <p>UIU Cisco Networking Academy</p>
-            <a href="https://drive.google.com/file/d/1RCPee-po9kdxUFneC15ZctBZt27o6wWJ/view?usp=sharing" target="_blank"
-              class="btn-cert-link">
-              <i class="fas fa-eye"></i> Show</a>
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-shopping-cart"></i></div>
+        <div class="project-content">
+          <h3>E-Commerce Platform</h3>
+          <p>Digital platform managing customers, merchants, and delivery tracking built with JavaFX.</p>
+          <div class="project-tags"><span class="tag">JavaFX</span><span class="tag">SceneBuilder</span><span class="tag">SCSS</span></div>
+          <div class="project-actions">
+            <a href="https://github.com/jubair2002/e-commerce-javafx" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h1 class="section-title">Let's Connect</h1>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Ready to Discuss Your Next Project?</h3>
-            <p>
-              I'm always interested in challenging DevOps and cloud
-              infrastructure projects. Whether you need help with cloud
-              migration, CI/CD implementation, or scaling your infrastructure,
-              let's talk!
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>hmjubair12@gmail.com</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>017**-***96</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Available for Remote Work</span>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="https://linkedin.com/in/habibullah-jubair" class="social-link" target="_blank"
-                rel="noopener noreferrer" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/jubair2002" class="social-link" target="_blank" rel="noopener noreferrer"
-                title="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://hub.docker.com/u/jubair2002" class="social-link" target="_blank"
-                rel="noopener noreferrer" title="Docker Hub">
-                <i class="fab fa-docker"></i>
-              </a>
-              <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="AWS Community">
-                <i class="fab fa-aws"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-form">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required
-                  placeholder="Tell me about your project, timeline, and how I can help"></textarea>
-              </div>
-              <button type="submit" class="btn-primary">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-          </div>
+  <section id="experience">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="experience-list">
+      <div class="experience-item">
+        <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="experience-content">
+          <span class="experience-date">2025 - Present</span>
+          <h3>DevOps Engineer (Self Placed)</h3>
+          <h4>Freelance / Contract</h4>
+          <p>Working on personal projects and contributing to cloud automation solutions.</p>
+          <ul>
+            <li>Designing CI/CD pipelines using GitLab CI, Jenkins, and ArgoCD</li>
+            <li>Deploying microservices applications on Kubernetes clusters (AKS)</li>
+            <li>Managing infrastructure as code using Terraform</li>
+            <li>Implementing monitoring solutions with Prometheus and Grafana</li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="education">
+    <h2 class="section-title">Education & Training</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 - 2026</span>
+          <h3>Bachelor of Computer Science & Engineering</h3>
+          <h4>United International University</h4>
+          <p>Specialization Major in Computer Systems Architecture, Quality Assurance and Software Engineering.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon"><i class="fab fa-redhat"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025</span>
+          <h3>Redhat Linux System Administration</h3>
+          <h4>CSL Training Dhaka</h4>
+          <p>Practical training in RHEL covering networking, security, and containerization.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023</span>
+          <h3>CCNAv7: Introduction to Networks</h3>
+          <h4>Cisco Networking Academy</h4>
+          <p>Configuring switches, routers, and troubleshooting connectivity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-redhat"></i></div>
+        <div class="cert-info"><h3>RedHat System Administration</h3><p>CSL Training</p></div>
+        <a href="https://drive.google.com/file/d/1fbwAlalu909pfwqRfKdfvHUaLv1XJkfX/view" class="cert-link" target="_blank">View</a>
+      </div>
+      
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="cert-info"><h3>Security For Engineer</h3><p>UIU Cisco Networking Academy (CENTeR)</p></div>
+        <a href="https://drive.google.com/file/d/1k5ILixLanwNE-LjN_iRl05m1KrepnGME/view" class="cert-link" target="_blank">View</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="cert-info"><h3>CCNAv7: Introduction to Networks</h3><p>Cisco Academy</p></div>
+        <a href="https://drive.google.com/file/d/1Ygm5Q0tpzb-YV657jX4bpBhY1J5fX5qw/view" class="cert-link" target="_blank">View</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-infinity"></i></div>
+        <div class="cert-info"><h3>DevOps For Engineer</h3><p>UIU Cisco Networking Academy (CENTeR)</p></div>
+        <a href="https://drive.google.com/file/d/1RCPee-po9kdxUFneC15ZctBZt27o6wWJ/view" class="cert-link" target="_blank">View</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-card">
+        <h2>Get In Touch</h2>
+        <p>I am currently open to new opportunities in DevOps and Cloud Engineering. Whether you have a question or just want to say hi, my inbox is always open!</p>
+        
+        <a href="mailto:hmjubair12@gmail.com" class="email-btn">
+            <i class="fas fa-envelope"></i> hmjubair12@gmail.com
+        </a>
+
+        <div class="location-text">
+            <i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh
+        </div>
+    </div>
+  </section>  
+
+  <footer>
+    <p>&copy; 2026 Habibullah Jubair. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll Highlight Logic
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Mobile Toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    toggle.addEventListener('click', () => {
+        navContainer.style.display = navContainer.style.display === 'flex' ? 'none' : 'flex';
+        // Add minimal mobile styling if toggled
+        if(navContainer.style.display === 'flex') {
+            navContainer.style.flexDirection = 'column';
+            navContainer.style.position = 'absolute';
+            navContainer.style.top = '70px';
+            navContainer.style.left = '0';
+            navContainer.style.width = '100%';
+            navContainer.style.background = 'white';
+            navContainer.style.padding = '2rem';
+            navContainer.style.borderBottom = '1px solid #e4e4e7';
+        }
+    });
+  </script>
 </body>
-
 </html>
