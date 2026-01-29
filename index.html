@@ -227,6 +227,7 @@
       width: 100%;
       max-width: var(--container-width);
       margin: 0 auto;
+      padding: 0 2rem;
     }
     .hero-content {
       flex: 1;
@@ -236,12 +237,12 @@
       flex-shrink: 0;
     }
     .hero-image {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid var(--accent);
-      box-shadow: 0 20px 40px var(--shadow);
+      box-shadow: 0 24px 48px var(--shadow);
     }
     .hero-mobile-img { display: none; }
     .hero-desktop-img { display: block; }
@@ -254,34 +255,37 @@
     .hero-greeting {
       font-family: 'Space Mono', monospace;
       color: var(--accent);
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
       font-weight: 400;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--accent);
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-size: clamp(2.75rem, 8vw, 4.75rem);
       font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1rem;
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
       letter-spacing: -0.04em;
+      color: var(--text-primary);
     }
 
     .hero .highlight { color: var(--accent); }
 
     .hero-subtitle {
-      font-size: clamp(1.2rem, 4vw, 2.2rem);
+      font-size: clamp(1.25rem, 4vw, 2.25rem);
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      font-weight: 400;
+      margin-bottom: 1.75rem;
+      font-weight: 500;
     }
 
     .hero-description {
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       color: var(--text-muted);
-      max-width: 600px;
-      line-height: 1.8;
-      margin-bottom: 3rem;
+      max-width: 560px;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
     }
 
     .hero-cta {
@@ -344,7 +348,7 @@
     .email-side {
       position: fixed;
       right: 2.5rem;
-      bottom: 0;
+      top: calc(var(--nav-height) + 5rem);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -357,10 +361,8 @@
       color: var(--text-muted);
       text-decoration: none;
       font-size: 0.85rem;
-      writing-mode: vertical-rl;
       transition: all 0.3s ease;
-      letter-spacing: 0.1em;
-      padding-bottom: 10px;
+      letter-spacing: 0.02em;
     }
 
     .email-side a:hover { color: var(--accent); transform: translateY(-3px); }
@@ -402,30 +404,40 @@
     /* Skills Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 1.75rem;
     }
 
     .skill-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.8rem;
-      padding: 1.5rem 0.5rem;
-      background: var(--bg);
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem 1rem;
+      background: var(--bg-alt);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       transition: all 0.3s ease;
     }
 
     .skill-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       border-color: var(--accent);
-      box-shadow: 0 10px 20px var(--shadow);
+      box-shadow: 0 12px 28px var(--shadow);
     }
 
-    .skill-item img { width: 40px; height: 40px; }
-    .skill-item span { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+    .skill-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .skill-item span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: center;
+    }
 
     /* Cards Logic (Projects & Experience) */
     .projects-list, .experience-list, .timeline, .cert-list {
@@ -583,6 +595,7 @@
     /* Responsive Design */
     @media (max-width: 1080px) {
       .social-links, .email-side { display: none; }
+      .skills-grid { grid-template-columns: repeat(5, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -611,6 +624,7 @@
       .hero-inner { flex-direction: column-reverse; gap: 2rem; }
       .hero-image { width: 200px; height: 200px; }
       .hero-mobile-img { display: block; }
+      .skills-grid { grid-template-columns: repeat(3, 1fr); }
       .hero-desktop-img { display: none; }
     }
 
@@ -634,6 +648,8 @@
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -926,7 +942,6 @@
           <div class="experience-content">
             <span class="experience-date">2025 - Present</span>
             <h3>DevOps Engineer (Self Placed)</h3>
-            <h4>Freelance / Contract</h4>
             <p>Working on personal projects and contributing to cloud automation solutions.</p>
             <ul>
               <li>Designing CI/CD pipelines using GitLab CI, Jenkins, and ArgoCD</li>
